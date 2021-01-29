@@ -1,6 +1,6 @@
 # MobileDet SSD
 
-This directory contains MobileDet SSD models in frozen graph (pb) and tflite format. 
+This directory contains MobileDet SSD models in tflite format. 
 *   Source: `http://download.tensorflow.org/models/object_detection/ssdlite_mobiledet_edgetpu_320x320_coco_2020_05_19.tar.gz`
 
 1.  mobiledet.tflite
