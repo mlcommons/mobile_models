@@ -1,6 +1,17 @@
-# MobileDet SSD
+# TFLite models for MLPerf
 
-This directory contains MobileDet SSD models in tflite format. 
+This directory contains all models in TFLite that are used for MLPerf.
+
+## Image classification
+
+Same as [v0.7](https://github.com/fatihcakirs/mobile_models/tree/main/v0_7).
+
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilenet_edgetpu_224_1.0_float.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilenet_edgetpu_224_1.0_int8.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilenet_edgetpu_224_1.0_uint8.tflite
+
+## Object detection
+
 *   Source: `http://download.tensorflow.org/models/object_detection/ssdlite_mobiledet_edgetpu_320x320_coco_2020_05_19.tar.gz`
 
 1.  mobiledet.tflite
@@ -33,10 +44,22 @@ This directory contains MobileDet SSD models in tflite format.
         bazel run -c opt tensorflow/lite/toco:toco -- --input_file=/path/to/ssdlite_mobiledet_edgetpu_320x320_coco_2020_05_19/uint8/tflite_graph.pb --output_file=/path/to/ssdlite_mobiledet_edgetpu_320x320_coco_2020_05_19/uint8/mobiledet_qat.tflite --input_shapes=1,320,320,3 --input_arrays=normalized_input_image_tensor --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3'  --inference_type=QUANTIZED_UINT8 --allow_custom_ops --mean_values=128 --std_values=128
         ```
 
-## Accuracy
+## Semantic Segmentation
 
-We evaluated the resulting tflite models on the server obtaining 0.285 and 0.278 mAP for mobiledet.tflite and mobiledet_qat.tflite models, respectively, on the COCO 2017 validation set at 320x320 input resolution. 
+Same as [v0.7](https://github.com/fatihcakirs/mobile_models/tree/main/v0_7).
 
-### Steps for evaluating accuracy on device
-# TODO
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/deeplabv3_mnv2_ade20k_float.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/deeplabv3_mnv2_ade20k_int8.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/deeplabv3_mnv2_ade20k_uint8.tflite
+
+## Language Understanding
+
+Same as [v0.7](https://github.com/fatihcakirs/mobile_models/tree/main/v0_7) (TODO: check this statement, add v1.0 version of MobileBert)
+
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilebert_float_20191023.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilebert_float_384_20200602.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilebert_float_384_gpu.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilebert_int8_384_20200602.tflite
+- https://github.com/fatihcakirs/mobile_models/blob/main/v0_7/tflite/mobilebert_int8_384_nnapi.tflite
+
 
