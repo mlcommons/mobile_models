@@ -30,7 +30,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 F32"
     offset: 1
     tags: "float32"
-    score_max: 1500
+    score_max: 1000
   }
   min_query_count: 1024
   min_duration_ms: 60000
@@ -61,14 +61,14 @@ task {
     name: "SSD-MobileDET UInt8"
     offset: 1
     tags: "uint8"
-    score_max: 2000
+    score_max: 400
   }
   model {
     id: "OD_float32"
     name: "SSD-MobileDET F32"
     offset: 1
     tags: "float32"
-    score_max: 5000
+    score_max: 400
   }
   min_query_count: 1024
   min_duration_ms: 60000
@@ -98,19 +98,19 @@ task {
     id: "IS_float32"
     name: "Deeplab-v3 Mobilenet-v2 F32"
     tags: "float32"
-    score_max: 1800
+    score_max: 200
   }
   model {
     id: "IS_uint8"
     name: "Deeplab-v3 Mobilenet-v2 UINT8"
     tags: "uint8"
-    score_max: 2000
+    score_max: 200
   }
   model {
     id: "IS_int8"
     name: "Deeplab-v3 Mobilenet-v2 INT8"
     tags: "int8"
-    score_max: 3000
+    score_max: 200
   }
   min_query_count: 1024
   min_duration_ms: 60000
@@ -140,25 +140,25 @@ task {
     id: "LU_float32"
     name: "MobileBert F32"
     tags: "float32"
-    score_max: 12000
+    score_max: 15
   }
   model {
     id: "LU_gpu_float32"
     name: "MobileBert F32 for GPU"
     tags: "float32-gpu"
-    score_max: 10000
+    score_max: 15
   }
   model {
     id: "LU_int8"
     name: "MobileBert Int8"
     tags: "int8"
-    score_max: 8000
+    score_max: 15
   }
   model {
     id: "LU_nnapi_int8"
     name: "MobileBert Int8 for NNAPI"
     tags: "int8-nnapi"
-    score_max: 8000
+    score_max: 15
   }
   min_query_count: 1024
   min_duration_ms: 60000
@@ -189,7 +189,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 Uint8 (offline)"
     offset: 1
     tags: "uint8-offline"
-    score_max: 1000
+    score_max: 2200
     scenario: "Offline"
   }
   model {
@@ -197,7 +197,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 F32 (offline)"
     offset: 1
     tags: "float32-offline"
-    score_max: 1500
+    score_max: 2200
     scenario: "Offline"
   }
   min_query_count: 24576
