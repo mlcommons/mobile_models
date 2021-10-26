@@ -10,7 +10,7 @@ task {
     name: "Open images subset for classification"
     type: IMAGENET
     path: "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/imagenet.zip"
-    groundtruth_src: "https://raw.githubusercontent.com/mlcommons/mobile_models/main/v1_0/assets/imagenet_val.txt"
+    groundtruth_src: ""
   }
   test_dataset {
     name: "Imagenet dataset for instrument test"
@@ -52,7 +52,7 @@ task {
     name: "Open images subset for detection"
     type: COCO
     path: "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/coco.zip"
-    groundtruth_src: "https://raw.githubusercontent.com/mlcommons/mobile_models/main/v1_0/assets/coco_val.pbtxt"
+    groundtruth_src: ""
   }
   test_dataset {
     name: "Coco dataset for instrument test"
@@ -147,7 +147,7 @@ task {
     name: "Squad V1.1 mini set"
     type: SQUAD
     path: "https://github.com/mlcommons/mobile_models/raw/main/v1_0/datasets/squad_eval_mini.tfrecord"
-    groundtruth_src: "https://github.com/mlcommons/mobile_models/raw/main/v1_0/assets/squad_groundtruth.tfrecord"
+    groundtruth_src: ""
   }
   test_dataset {
     name: "Squad V1.1 mini set"
@@ -195,7 +195,7 @@ task {
     name: "Open images subset for classification"
     type: IMAGENET
     path: "https://github.com/mlcommons/mobile_models/raw/main/v0_7/datasets/imagenet.zip"
-    groundtruth_src: "https://raw.githubusercontent.com/mlcommons/mobile_models/main/v1_0/assets/imagenet_val.txt"
+    groundtruth_src: ""
   }
   test_dataset {
     name: "Imagenet dataset for instrument test"
