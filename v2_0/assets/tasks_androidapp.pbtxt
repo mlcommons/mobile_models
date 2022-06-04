@@ -1,5 +1,5 @@
 task {
-  name: "Image classification"
+  name: "Image Classification"
   dataset {
     name: "Imagenet classification validation set"
     type: IMAGENET
@@ -41,7 +41,7 @@ task {
 }
 
 task {
-  name: "Object detection"
+  name: "Object Detection"
   dataset {
     name: "COCO 2017 validation set"
     type: COCO
@@ -175,7 +175,7 @@ task {
 }
 
 task {
-  name: "Image classification (offline)"
+  name: "Image Classification (Offline)"
   dataset {
     name: "Imagenet classification validation set"
     type: IMAGENET
