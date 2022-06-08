@@ -23,7 +23,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 Uint8"
     offset: 1
     tags: "uint8"
-    score_max: 1000
+    max_throughput: 1000
     image_width: 224
     image_height: 224
   }
@@ -32,7 +32,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 F32"
     offset: 1
     tags: "float32"
-    score_max: 1500
+    max_throughput: 1500
     image_width: 224
     image_height: 224
   }
@@ -65,7 +65,7 @@ task {
     name: "SSD-MobileDET UInt8"
     offset: 1
     tags: "uint8"
-    score_max: 2000
+    max_throughput: 2000
     num_classes: 91
     image_width: 320
     image_height: 320
@@ -75,7 +75,7 @@ task {
     name: "SSD-MobileDET F32"
     offset: 1
     tags: "float32"
-    score_max: 5000
+    max_throughput: 5000
     num_classes: 91
     image_width: 320
     image_height: 320
@@ -108,7 +108,7 @@ task {
     id: "IS_uint8_mosaic"
     name: "MOSAIC Uint8"
     tags: "uint8"
-    score_max: 2000
+    max_throughput: 2000
     num_classes: 31
     image_width: 512
     image_height: 512
@@ -117,7 +117,7 @@ task {
     id: "IS_float32_mosaic"
     name: "MOSAIC F32"
     tags: "float32"
-    score_max: 2000
+    max_throughput: 2000
     num_classes: 31
     image_width: 512
     image_height: 512
@@ -150,25 +150,25 @@ task {
     id: "LU_float32"
     name: "MobileBert F32"
     tags: "float32"
-    score_max: 12000
+    max_throughput: 12000
   }
   model {
     id: "LU_gpu_float32"
     name: "MobileBert F32 for GPU"
     tags: "float32-gpu"
-    score_max: 10000
+    max_throughput: 10000
   }
   model {
     id: "LU_int8"
     name: "MobileBert Int8"
     tags: "int8"
-    score_max: 8000
+    max_throughput: 8000
   }
   model {
     id: "LU_nnapi_int8"
     name: "MobileBert Int8 for NNAPI"
     tags: "int8-nnapi"
-    score_max: 8000
+    max_throughput: 8000
   }
   min_query_count: 1024
   min_duration_ms: 60000
@@ -199,7 +199,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 Uint8 (offline)"
     offset: 1
     tags: "uint8-offline"
-    score_max: 1000
+    max_throughput: 1000
     scenario: "Offline"
     image_width: 224
     image_height: 224
@@ -209,7 +209,7 @@ task {
     name: "MobileNetEdgeTPU 224 1.0 F32 (offline)"
     offset: 1
     tags: "float32-offline"
-    score_max: 1500
+    max_throughput: 1500
     scenario: "Offline"
     image_width: 224
     image_height: 224
@@ -242,7 +242,7 @@ task {
     id: "IS_float32"
     name: "Deeplab-v3 Mobilenet-v2 F32"
     tags: "float32"
-    score_max: 1800
+    max_throughput: 1800
     num_classes: 31
     image_width: 512
     image_height: 512
@@ -251,7 +251,7 @@ task {
     id: "IS_uint8"
     name: "Deeplab-v3 Mobilenet-v2 UINT8"
     tags: "uint8"
-    score_max: 2000
+    max_throughput: 2000
     num_classes: 31
     image_width: 512
     image_height: 512
@@ -260,7 +260,7 @@ task {
     id: "IS_int8"
     name: "Deeplab-v3 Mobilenet-v2 INT8"
     tags: "int8"
-    score_max: 3000
+    max_throughput: 3000
     num_classes: 31
     image_width: 512
     image_height: 512
