@@ -1,0 +1,1 @@
+`coco-test` dataset contains the first 10 images of the `v0_7/datasets/coco` dataset. It's intended to be used in integration tests while also allowing accuracy calculation using the same groundtruth file as for the `v0_7/datasets/coco`.
