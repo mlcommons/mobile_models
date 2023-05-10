@@ -1,0 +1,26 @@
+name: Check
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  markdown-link:
+    runs-on: ubuntu-latest
+    steps:
+      # This repo contains many big files but we only need *.md files to run markdown-link-check
+      - name: Partial Clone
+        run: |
+          REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          BRANCH="${GITHUB_HEAD_REF}"
+          echo "Cloning branch $BRANCH from repository $GITHUB_REPOSITORY"
+          git clone --sparse --filter=blob:none --no-checkout --depth 1 --single-branch --branch $BRANCH $REPO .
+          git sparse-checkout init
+          echo '*.md' > .git/info/sparse-checkout
+          git config core.sparseCheckoutCone false
+          git checkout --progress
+      - name: markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-verbose-mode: yes
+          use-quiet-mode: yes
