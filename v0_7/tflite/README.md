@@ -16,7 +16,7 @@ This directory contains all models in TFLite that are used for MLPerf.
 
     *   Source:
         http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz
-        listed on https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
+        listed on https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md
     *   After downloading, the frozen graph is exported using
         export_tflite_ssd_graph.py:
 
